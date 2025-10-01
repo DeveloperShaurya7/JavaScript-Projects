@@ -92,7 +92,7 @@ If you’d like to contribute or suggest improvements, feel free to **fork this 
 
 Contact
 
-Raviranjan Kumar ~ Shaurya
+Raviranjan Kumar ~ Shaurya <br>
 Email:   webwithshaurya@gmail.com <br>
 Website: https://developershaurya.com/ <br>
 GitHub:  https://github.com/DeveloperShaurya7/ <br>
