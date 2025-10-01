@@ -12,7 +12,7 @@ This repository is a growing collection of projects I’m building for people wh
 A **real-time digital clock** that dynamically updates every second, showing the current time in **HH:MM:SS** format.  
 It uses JavaScript’s **Date API** and **DOM manipulation** to display the time and updates automatically every second.
 
-#### 🔹 Features:
+#### Features:
 - Displays the current time (hours, minutes, seconds)
 - Automatically updates every second
 - Shows time in **double-digit format** (e.g., 09:05:07)
