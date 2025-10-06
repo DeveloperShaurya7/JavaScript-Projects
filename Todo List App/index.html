@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced To-Do App with Deadlines</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced To-Do App with Deadlines</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <div class="app">
-    <header>
-      <h1><i class="fa-solid fa-table-list"></i> To-Do List</h1>
-      <button id="theme-toggle">
-        🌙
-      </button>
-    </header>
+<div class="app">
 
-    <div class="input-box">
-      <input type="text" id="task-input" placeholder="What needs to be done?" />
-      <input type="datetime-local" id="task-deadline" />
-      <button id="add-btn">Add</button>
-    </div>
+    <!-- top bar -->
+     <div class="top-bar">
+        <h1><i class="fa-solid fa-table-list"></i> To-Do List</h1>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+     </div>
 
-    <div class="filters">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="active">Active</button>
-      <button class="filter" data-filter="completed">Completed</button>
-    </div>
+     <!-- Input box -->
+      <div class="input-box">
+        <div class="input-group">
+            <label for="task-input">Task</label>
+            <input type="text" id="task-input" placeholder="What needs to be done?">
+        </div>
 
-    <ul id="task-list"></ul>
+        <div class="input-group">
+            <label for="task-deadline">Deadline</label>
+            <input type="datetime-local" id="task-deadline">
+        </div>
 
-    <div class="footer">
-      <button id="clear-all">Clear All</button>
-    </div>
-  </div>
+        <button id="add-btn" type="button" aria-label="Add Task">Add</button>
+      </div>
 
-  <script src="script.js"></script>
+      <!-- Filters -->
+       <div class="filters" role="group" aria-label="Task filters">
+        <button class="filter active" data-filter="all" type="button" aria-pressed="true">All</button>
+        <button class="filter" data-filter="active" type="button" aria-pressed="false">Active</button>
+        <button class="filter" data-filter="completed" type="button" aria-pressed="false">Completed</button>
+       </div>
+
+       <!-- Task List -->
+        <ul id="task-list" aria-live="polite" aria-label="Task List"></ul>
+
+        <!-- Actions -->
+         <div class="actions">
+            <button id="clear-all" type="button" aria-label="Clear all tasks">Clear All</button>
+         </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
